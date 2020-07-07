@@ -11,7 +11,7 @@ public class MissingInteger {
 	}
 
 	static public int solution(int[] A) {
-		Map<Integer, Boolean> map = new HashMap();
+		Map<Integer, Boolean> map = new HashMap<Integer, Boolean>();
 		int max = 1;
 
 		for (int a : A) {
