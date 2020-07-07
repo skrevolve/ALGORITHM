@@ -5,7 +5,9 @@ import java.util.Map;
 
 public class MissingInteger {
 	static public void main(String[] args) {
-		solution(new int[]{1, 3, 6, 4, 1, 2}); // = 5
+		//solution(new int[]{0,1,2,3,4,5,6}); // = 7
+		//solution(new int[]{0,1,2,4}); // = 3
+		System.out.print(solution(new int[]{0,1,2,3,4,5,6}));
 	}
 
 	static public int solution(int[] A) {
