@@ -12,7 +12,7 @@ public class MissingInteger {
 
 	static public int smallestInt(int[] A) {
 		Map<Integer, Boolean> map = new HashMap<Integer, Boolean>();
-		int max = 1;
+		int max = 0;
 
 		for (int a : A) { //입력된 A배열 순회
 			if (a > 0) {
