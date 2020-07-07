@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class MissingInteger {
 	static public void main(String[] args) {
-		//solution(new int[]{0,1,2,3,4,5,6}); // = 7
-		//solution(new int[]{0,1,2,4}); // = 3
-		System.out.print(solution(new int[]{1,0,2,4,3,5,6}));
+		//smallestInt(new int[]{0,1,2,3,4,5,6}); // = 7
+		//smallestInt(new int[]{0,1,2,4}); // = 3
+		System.out.print(smallestInt(new int[]{1,0,2,4,3,5,6}));
 	}
 
 	static public int smallestInt(int[] A) {
@@ -23,7 +23,7 @@ public class MissingInteger {
 			}
 		}
 
-		for (int i=1 ; i <= max ; i++) { //두번째로  max사이즈만큼 순회한다
+		for (int i=1; i <= max; i++) { //두번째로  max사이즈만큼 순회한다
 			if (max == i && map.containsKey(i)) { //순회의 idx값이 max와 같다면 +1하여 값을 반환한다
 				return i+1;
 			}
