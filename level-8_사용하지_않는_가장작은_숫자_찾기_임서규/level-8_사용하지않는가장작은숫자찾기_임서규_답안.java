@@ -1,30 +1,25 @@
-package algorhithm;
-import java.util.*;
+static public int smallestInt(int[] A) {
+    Map<Integer, Boolean> map = new HashMap<Integer, Boolean>();
+    int max = 0;
 
-public class Main {
-	public static void main(String[] args){
+    for(int a : A) {
+        if(a > 0) {
+            map.put(a,true);
+            if(max < a) {
+                max = a;
+            }
+        }else if(a < 0){
+            map.put(a,false);
+        }
+    }
 
-		Scanner sc = new Scanner(System.in);
-		String[] input = sc.nextLine().split(",");
-
-		int max = 0;
-
-		for(int i=0; i<input.length; i++) {
-			Arrays.sort(input);
-			System.out.print(input[i]);
-			if(max <= Integer.parseInt(input[i])) {
-				max = Integer.parseInt(input[i]);   		
-			}else if(max >= Integer.parseInt(input[i])) {
-				max = Integer.parseInt(input[i]);
-		    }
-		}
-		System.out.print("=> "+(max-1)+"\n");
-		System.out.print("=> "+(max+1)+"\n");
-		sc.close();
-	}		
+    for(int i=1; i <= max; i++) {
+        if(max == i && map.containsKey(i)) {
+            return max+1;
+        }
+        if(!map.containsKey(i)){
+            return i;
+        }
+    }
+    return max;
 }
-
-//출력시..
-//4,2,1,0
-//0124=> 3
-//=> 5
