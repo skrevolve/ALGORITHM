@@ -1,7 +1,8 @@
 static public int smallestInt(int[] A) {
     Map<Integer, Boolean> map = new HashMap<Integer, Boolean>();
     int max = 0;
-
+    int isFalse = -1; // 음수가 입력될경우 -1을 반환
+    
     for(int a : A) {
         if(a > 0) {
             map.put(a,true);
@@ -9,7 +10,7 @@ static public int smallestInt(int[] A) {
                 max = a;
             }
         }else if(a < 0){
-            map.put(a,false);
+            return isFalse;
         }
     }
 
