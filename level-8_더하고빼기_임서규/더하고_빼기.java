@@ -1,22 +1,4 @@
-// public static void main(String[] args) {
-
-// 	Scanner sc = new Scanner(System.in);
-// 	System.out.println("숫자를 입력하세요.(10~10000)\n입력:");
-// 	int n = sc.nextInt();
-
-// 	if(n > 10000) {
-// 		System.err.print("잘못된 입력입니다.다시입력해주세요\n입력:");
-// 		n = sc.nextInt();
-// 		input(n+1);
-// 		sc.close();
-// 	}else {
-// 		input(n+1);
-// 		sc.close();
-// 	}
-			
-			
-// }
-		
+// 처음 풀당시 문제 이해 파악을 전혀 못함. 문제가이상해서 
 // public static void input(int limit) {
 			
 // 	for(int i=1; i<limit; i++) {
@@ -53,12 +35,34 @@
 // 	}
 // }
 
-public static void input(int limit) {
-	if(limit >=10 && limit <= 10000) {
-    	for(int i=1; i<100; i++) {
-    		if((i%9)==0) {
-    			System.out.println(i+"-apple");
-    		}
-    	}
+
+//최종 완성본
+public static String test(int input) {
+	if(input >= 10 && input <= 10000) {
+		
+		int total=0;
+		int result=0;
+		String temp = Integer.toString(input);
+		int[] splits = new int[temp.length()];
+
+		for (int i = 0; i < temp.length(); i++) {
+			splits[i] = temp.charAt(i) - '0';
+			total += splits[i]; //3+2+5=10..
+		}
+
+		result = sum(input,total); //325-10=315..
+	//		System.out.println(result); 
+	//		System.out.println( Arrays.toString(splits)+"=" + total);
+
+		if(result%9 == 0) { //315 = 9배수 = apple..
+			return "apple";
+		}
+
 	}
+	return "";
 }
+
+public static int sum(int a, int b) {
+    return a-b;
+}
+
