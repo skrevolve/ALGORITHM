@@ -51,8 +51,8 @@ public static String test(int input) {
 		}
 
 		result = sum(input,total); //325-10=315..
-	//		System.out.println(result); 
-	//		System.out.println( Arrays.toString(splits)+"=" + total);
+//		System.out.println(result); 
+//		System.out.println( Arrays.toString(splits)+"=" + total);
 
 		if(result%9 == 0) { //315 = 9배수 = apple..
 			return "apple";
