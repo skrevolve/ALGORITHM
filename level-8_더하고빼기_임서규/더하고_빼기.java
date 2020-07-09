@@ -36,7 +36,7 @@
 // }
 
 
-//최종 완성본
+//최종 완성본(예시 중점으로 문제의도를 정하고 풀었음)
 public static String test(int input) {
 	if(input >= 10 && input <= 10000) {
 		
