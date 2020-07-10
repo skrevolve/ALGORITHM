@@ -1,10 +1,11 @@
+//System.out.println(smallestInt(new int[]{0, 3, 4, 5, 7 })); 
 public static int smallestInt(int[] A) {
     HashMap<Integer, Boolean> map = new HashMap<Integer, Boolean>();
     int max = 0;
     int isFalse = -1;
 
     for(int a : A) {
-        if(a >= 0 ) { //여기서 조건을 실수해서 hashmap에서 index갯수가 하나모잘랏음 (
+        if(a >= 0 ) { //여기서 조건을 실수해서 hashmap에서 index갯수가 하나모잘랏음
             map.put(a,true);
             if(max < a) {
                 max = a;
