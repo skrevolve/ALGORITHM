@@ -50,7 +50,7 @@ public static String test(int input) {
 			total += splits[i]; //3+2+5=10..
 		}
 
-		result = sum(input,total); //325-10=315..
+		result = minus(input,total); //325-10=315..
 //		System.out.println(result); 
 //		System.out.println( Arrays.toString(splits)+"=" + total);
 
@@ -62,7 +62,7 @@ public static String test(int input) {
 	return "";
 }
 
-public static int sum(int a, int b) {
+public static int minus(int a, int b) { //함수의 기능을 알수있도록 함수명 등록
     return a-b;
 }
 
