@@ -19,5 +19,5 @@ public static int getNumber(double[] input) {
 			middleIndex = i;
 		}
 	}
-	    return middleIndex;	
+	    return middleIndex;	//인덱스 위치값 return
  }
