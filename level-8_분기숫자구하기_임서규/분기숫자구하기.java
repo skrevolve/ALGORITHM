@@ -12,7 +12,7 @@ public static int input(int n) {
 	return n;
 }
 
-//--------방법2------------------대학에서는 이런방식으로 많이 가르친다고 한다.
+//--------방법2------------------
 public static int input(int n) {
     int boongi = 0;
     if (1<=n && n<=12){
